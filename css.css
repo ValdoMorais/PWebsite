@@ -1,0 +1,440 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tudo{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.bod:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(to top, black, transparent);
+    z-index: 1;
+}
+.bod img{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    
+}
+/*CSS slider Background Part 2*/
+@keyframes animate {
+    0%{
+        background-image: url(img/trader.jpg);
+    }
+    25%{
+        background-image: url(img/pexels-lukas-574071.jpg);
+    }
+    50%{
+        background-image: url(img/negative.jpg);
+    }
+    75%{
+        background-image: url(img/trader2.jpg);
+    }
+    100%{
+        background-image: url(img/code1.jpg);
+    }
+}
+.banner-text{
+    margin-top: 30vh;
+    text-align: center;
+}
+.nav{
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    transition: .5s;
+    overflow: hidden;
+    z-index: 2;
+    
+}
+.nav:hover{
+width: 22%;
+z-index: 0,5;
+
+}
+.nav ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.nav ul li:hover{
+    background: #ea1d63;
+}
+
+.nav ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.nav ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    line-height: 60px;
+    text-align: center ;
+}
+.nav ul li .icon .fa{
+    font-size: 24px;
+}
+.nav ul li .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+
+}
+/*CSS slider Background Part 2*/
+.banner-area{
+    -webkit-background-size: cover;
+    background-size:cover;
+    background-position:center center;
+    width: 100%;
+    height:675px;
+    animation: animate 16s ease-in-out infinite;
+    background-size:cover;
+}
+.banner-area:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(to top, black, transparent);
+    z-index: 1;
+}
+.view{
+    position: absolute;
+    top:100vh;
+    margin: 0;
+    padding: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 35%;
+    color: rgb(237, 248, 248);
+    border-radius: 5px;
+    position: relative;
+    background-color: rgb(172, 207, 240);
+    box-shadow: 0px 20px 70px 0px rgb(0,0,0,0.21);
+}
+
+
+.card .inside{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -120px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.card .upside{
+    position: absolute;
+    width: 100%;
+    height: 390px;
+    background-image: url('img/code.jpg');
+    background-position: 50%;
+    background-size: cover;
+    z-index: 3;
+    text-align: center;
+    transition: .5s ease-in-out;
+}
+
+.pCard_on .upside{
+    height: 100px;
+    box-shadow: 0 0 30px #cfd8dc;
+}
+.card .upside .text{
+    position: absolute;
+    top: 250px;
+    left: 70px;
+    color:#fff;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+
+.pCard_on .upside .text{
+    top: 20px;
+}
+
+.card .upside .add{
+    border-radius: 50%;
+    background-color: #100f11;
+    box-shadow: 0px 5px 24px 0px rgba(0,0,0,0.43);
+    position: absolute;
+    top: 344px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 66px;
+    height: 66px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.pCard_on .upside .add{
+    transform: rotate(360deg) scale(0,5);
+    top: 470px;
+}
+.card .bottom{
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    z-index: 2;
+    transition: .5s ease-in-out;
+}
+
+.pCard_on .bottom{
+    height: 100;
+    box-shadow: 0 0 30px #cfd8dc;
+}
+.card .bottom div{
+    margin-top: 50px;
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    transition: .5s ease-in-out;
+
+}
+
+.pCard_on .bottom div{
+    margin-top: 0px;
+}
+.card .bottom div p:first-of-type{
+    color: #68818c;
+    margin-bottom: 5px;   
+}
+.card1 .bottom div p:first-of-type{
+    color: #68818c;
+    margin-bottom: 5px;   
+}
+
+.card .bottom div p:last-of-type{
+    color: #334750;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.card .inside a i{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card .inside a i:hover{
+    transform: scale(1,2);
+}
+
+.card .inside a:nth-of-type(1) i{
+    color: #3b5998;
+    border: 2px solid #3b5998;
+}
+
+.card .inside a:nth-of-type(2) i{
+    color: #0077b5;
+    border: 2px solid #0077b5;
+}
+.card1 .inside a:nth-of-type(2) i{
+    color: #0077b5;
+    border: 2px solid #0077b5;
+}
+.card .inside a:nth-of-type(3) i{
+    color: #1769ff;
+    border: 2px solid #1769ff;
+}
+
+.card .inside a:nth-of-type(4) i{
+    color: #334750;
+    border: 2px solid #334750;
+}
+
+
+.card .upside .add{
+    font-size: 20px;
+    line-height: 66px;
+}
+
+.view .card{
+    float: left;
+}
+
+.about{
+    position: absolute;
+    top: 200vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 70vh;
+    background-color:aqua;
+
+}
+.contact{
+    position: absolute;
+    top: 270vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: url(img/img1.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactInfo {
+    color:#fff;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 22,5%;
+    font-size: 20px;
+}  
+.contactInfo i{
+    margin-right:20px;
+    font-size: 25;
+}
+.contactForm{
+    max-width: 500px;
+    margin-right: 1%;
+}
+.contactInfo, .contactForm{
+    flex: 1;
+}
+.contactForm h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.contactForm .textBox{
+    background: #000;
+    color: #fff;
+    border: none;
+    width: calc(50%- 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    opacity: 0.4;
+}
+.contactForm .textBox:first-child{
+    margin-right: 15px;
+}
+.contactForm textarea{
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 450px;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgb(0,0,0,0.1);
+    margin-bottom: 20px;
+    opacity: 0.4;
+}
+
+.contactForm .sendBtn{
+    margin-right: 15%;
+    float: right;
+    background: #2e94e3;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+.contactForm .sendBtn:hover{
+    background: #0582e3;
+    cursor: pointer;
+}
+
+@media  screen and (max-width: 768px) {
+    .nav:hover{
+        width: 60px;
+        z-index: 0,5;
+    }
+    .card{
+        margin-left:20%; 
+    }
+    
+    .contact{
+        flex-direction: column;
+        height: 110vh;
+    }
+    .contactInfo, .contactForm{
+        margin: 30px 50px;
+        padding: 0px;
+    }
+    .contactInfo{
+        padding-top: 30px;
+        text-align: center;
+        width: 100%;
+        line-height: 35px;
+    }
+    .contactForm h2{
+        font-size: 30px;
+    }
+    .contactForm .textBox{
+        width: 100%;
+        padding: 0px;
+    }
+    .contactForm textarea{
+        width: 100%;
+        padding: 0px;
+        height: 10px;
+
+    }
+    .contactForm .sendBtn{
+        margin-right: 0px;
+       
+    }
+    
+}
